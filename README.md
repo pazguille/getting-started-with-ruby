@@ -1,4 +1,3 @@
-getting-started-with-ruby
-=========================
+# Getting started with Ruby.
 
-Getting started with Ruby.
+I'm learning Ruby! :)
