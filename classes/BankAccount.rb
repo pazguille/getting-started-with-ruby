@@ -33,4 +33,22 @@ class BankAccount
   def withdram(amount)
     @balance -= amount
   end
+
+  def call_reset_method
+    reset!
+  end
+
+  private
+  def reset!
+    @balance = 0
+  end
+
+  def private_reset!
+    @balance = 0
+  end
+
+ protected
+  def protected_reset!
+    @balance = 0
+  end
 end
