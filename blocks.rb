@@ -11,11 +11,10 @@ say_hello do
   puts "Hello again"
 end
 
-
 def say_hello2(&block)
   puts "Hello, world!"
 
-  if block.given?
+  if block_given?
     block.call
   else
     puts "No block was given"
@@ -41,7 +40,22 @@ say_hello2 do
   "Guille"
 end
 
-def herader(&block)
+# Rescue and Ensure / raise
+def header(&block)
   puts "This is our hedaer"
   block.call
+rescue
+  puts "This is where we would rescue an error."
+ensure
+    puts "This is our footer."
 end
+
+header do
+  puts "pazguille"
+  raise "This is an error"
+end
+
+# Begin End blocks
+puts "This is the first line of our Ruby module."
+BEGIN { puts "INSIDE OF THE BEGIN BLOCK"}
+END { puts "INSIDE OF THE END BLOCK"}
