@@ -1,8 +1,8 @@
-def friend(name):
+def friend(name)
   puts "My friend is " + name + "."
 end
 
-def friend2(name):
+def friend2(name)
   puts "My friend is #{name}."
 end
 
