@@ -16,3 +16,11 @@ def what_up(greeting, *bros)
 end
 
 what_up("What up", "Justin", "Ben", "Kevin Sorbo")
+
+def alphabetize(arr, rev=false)
+    if rev
+        arr.sort { |a, b| b <=> a }
+    else
+        arr.sort { |a, b| a <=> b }
+    end
+end
